@@ -1,5 +1,5 @@
 %!TEX TS-program = xelatex
-\documentclass{schoens-cv}
+\documentclass[print]{schoens-cv}
 \usepackage{tikz}
 \usetikzlibrary{mindmap,trees}
 
@@ -9,7 +9,7 @@
        
 % In the aside, each new line forces a line break
 \begin{aside}	
-  \section{where}
+  \section{location}
     195 5th St E
     APT 3003
     Saint Paul
@@ -22,18 +22,18 @@
 
   \section{languages}
 	{\setlength{\tabcolsep}{0.5em}%
-  	\begin{tabular}{ r | c }
-    		C\# & \skilled \love
-    		JavaScript & \skilled \love
-    		CoffeeScript & \skilled \love
-  		Ruby & \skilled \love
-  		Clojure & \love
-  		Go & \love
-  		F\# & \skilled \love
-  		C/C++ & \skilled
-  		HTML {\bf 5} & \skilled
-  		CSS {\bf 3} & \skilled
-  		SASS & \skilled \love
+  	\begin{tabular}{ r | l }
+    		C\# & \skill\skill\skill\skill
+    		Scala & \skill\skill\skill
+    		JavaScript & \skill\skill\skill\skill
+    		CoffeeScript & \skill\skill\skill
+  		Ruby & \skill\skill
+  		Clojure & \skill\skill
+  		Go & \skill
+  		F\# & \skill
+  		C/C++ & \skill\skill
+  		HTML {\bf 5} & \skill\skill\skill\skill
+  		CSS {\bf 3} & \skill\skill\skill\skill
     	\end{tabular}}
 \end{aside}
 
@@ -68,8 +68,13 @@ craft beer, snowboarding, motorcycles, music, the future, game development
 \section{experience}
 
 \begin{entrylist}
+    \entry
+         {since Feb}
+         {Software Engineer}
+         {The Nerdery}
+         {Full stack developer responsible primarily for Purina and PurinaOne websites. Developed familiarity with the ArcGIS platform for mapping applications during this time.}
 	\entry
-		{since May}
+		{2012-2013}
 		{Senior Software Developer}
 		{Surge LLC.}
 		{Lead developer on three projects. Developed expertise with Adobe InDesign Server and %
@@ -101,41 +106,37 @@ craft beer, snowboarding, motorcycles, music, the future, game development
 		{2006-2008}
 		{Software Developer}
 		{Warner Connect Inc.}
-		{I started at WC as a Network Engineer - architecting, implementing and maintaining new network %
-		 systems at our clients locations. Within six months however, I had convinced my boss to let me take %
-		 over the newly formed Development branch of the company, and begin my professional career in software%
-		  development. This was where I first gained exposure to C\#, ASP.NET, Classic ASP, T-SQL, and all of %
-		 tools and techniques that come along with them.}
+		{Responsible for a wide variety of websites and business applications. Developed expertise with Microsoft CRM during this time.}
 \end{entrylist}
 
 \section{developed skills}
 
 \begin{tikzpicture}
-	\path[mindmap,concept color=black]
+	\path[mindmap,concept color=lightgray!50!white,text=black]
 		node[concept] {Software \\ Development}
 		[clockwise from=0]
-    		child[concept color=green,text=white] {
-      		node[concept] {practical}
+    		child[concept color=lightgray!30!white] {
+      		node[concept] {engineering}
       		[clockwise from=90]
-      		child { node[concept] {algorithms} }
-      		child { node[concept] {data structures} }
-      		child { node[concept] {architecture} }
-      		child { node[concept] {software engineer\-ing} }
+      		child[concept color=lightgray!15!white] { node[concept] {algorithms} }
+      		child[concept color=lightgray!15!white] { node[concept] {data structures} }
+      		child[concept color=lightgray!15!white] { node[concept] {architecture} }
+      		child[concept color=lightgray!15!white] { node[concept] {design patterns} }
     		}  
-    		child[concept color=blue] {
+    		child[concept color=lightgray!30!white] {
       		node[concept] {soft skills}
       		[clockwise from=-30]
-      		child { node[concept] {customer relations} }
-      		child { node[concept] {time management} }
-      		child { node[concept] {team management} }
+      		child[concept color=lightgray!15!white] { node[concept] {customer relations} }
+      		child[concept color=lightgray!15!white] { node[concept] {time \\ management} }
+      		child[concept color=lightgray!15!white] { node[concept] {team \\ management} }
     		}
-    		child[concept color=red] { 
-    			node[concept] {technical}
+    		child[concept color=lightgray!30!white] { 
+    			node[concept] {practical}
     			[clockwise from=-70]
-    			child { node[concept] {languages} }
-    			child { node[concept] {databases} }
-    			child { node[concept] {web servers} }
-    			child { node[concept] {source control} }
+    			child[concept color=lightgray!15!white] { node[concept] {languages} }
+    			child[concept color=lightgray!15!white] { node[concept] {databases} }
+    			child[concept color=lightgray!15!white] { node[concept] {web servers} }
+    			child[concept color=lightgray!15!white] { node[concept] {source control} }
     		};
 \end{tikzpicture}
 
@@ -144,16 +145,16 @@ craft beer, snowboarding, motorcycles, music, the future, game development
 \begin{entrylist}
 	\entry
 		{Languages}
-		{I could almost speak them...}
+		{I can always learn one more!}
 		{}
 		{%
-			\hilite{C\#}, Ruby, Go, Clojure,
+			\hilite{C\#, Scala}, Ruby, Go, Clojure,
 			\hilite{JavaScript, CoffeeScript,}
 			Powershell, C/C++, \hilite{HTML, CSS, SASS}
 		}
 	\entry
 		{Tools}
-		{What is a workman without his tools...}
+		{What is a craftsman without his tools...}
 		{}
 		{%
 			\hilite{Visual Studio, XCode,} Sublime Text, \hilite{Git}, Mercurial,
@@ -164,7 +165,7 @@ craft beer, snowboarding, motorcycles, music, the future, game development
 		{A strong foundation to build upon...}
 		{}
 		{%
-			\hilite{ASP.NET MVC, Node.js,} Rails, OpenGL, OpenTK,
+			\hilite{ASP.NET MVC, Play, Node.js,} Rails, OpenGL, OpenTK,
 			Noir, \hilite{Knockout.js}, Underscore.js, Backbone.js, \hilite{jQuery}
 		}
 \end{entrylist}

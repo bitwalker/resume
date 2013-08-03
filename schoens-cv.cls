@@ -1,4 +1,4 @@
-\ProvidesClass{schoens-cv}[2013/01/06 CV class]
+\ProvidesClass{schoens-cv}[2013/08/02 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
@@ -74,7 +74,7 @@
       \fontsize{40pt}{72pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
-    \node [anchor=north] at (name.south) {%
+    \node [anchor=north] (job title) at (name.south) {%
       \fontsize{14pt}{24pt}\color{header}%
       \thinfont #3%
     };
@@ -151,17 +151,17 @@
 \RequirePackage[absolute,overlay]{textpos}
 \RequirePackage[clock]{ifsym}
 \setlength{\TPHorizModule}{1cm}
-\setlength{\TPVertModule}{1cm}
+\setlength{\TPVertModule}{0.983cm}
 \newenvironment{aside}{%
   \let\oldsection\section
   \renewcommand{\section}[1]{
-    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
+    \par\vspace{\baselineskip}{\LARGE\headingfont\color{headercolor} ##1}
   }
-  \newcommand{\skilled}{
+  \newcommand{\checksout}{
     {\color{green} $\checkmark$}
   }
-  \newcommand{\love}{
-    {\color{red} $\heartsuit$}
+  \newcommand{\skill}{
+    {\color{green} $\star$}
   }
   \begin{textblock}{4.4}(1.5, 4.33)
   \begin{flushright}
