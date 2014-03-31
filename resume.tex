@@ -1,171 +1,143 @@
-%!TEX TS-program = xelatex
-\documentclass[print]{schoens-cv}
-\usepackage{tikz}
-\usetikzlibrary{mindmap,trees}
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
 
-\begin{document}
-\header{paul}{schoenfelder}
-       {software developer}
-       
-% In the aside, each new line forces a line break
-\begin{aside}	
-  \section{location}
-    8950 Goodrich Rd
-    APT 305
-    Bloomington
-    MN
-    
-  \section{online}
-    \href{mailto:paulschoenfelder@gmail.com}{paulschoenfelder@gmail.com}
-    
-    \href{https://github.com/bitwalker}{github.com/bitwalker}
 
-  \section{languages}
-	{\setlength{\tabcolsep}{0.5em}%
-  	\begin{tabular}{ r | l }
-    		C\# & \skill\skill\skill\skill
-    		Scala & \skill\skill\skill
-    		Elixir & \skill\skill\skill\skill
-    		Erlang & \skill\skill
-    		JavaScript & \skill\skill\skill\skill
-  		Ruby & \skill\skill
-  		Clojure & \skill\skill
-  		F\# & \skill
-  		HTML {\bf 5} & \skill\skill\skill\skill
-  		CSS {\bf 3} & \skill\skill\skill\skill
-    	\end{tabular}}
-\end{aside}
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
 
-\section{interests}
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
 
-programming languages, design, data mining, distributed systems, embedded systems, artificial intelligence,
-craft beer, snowboarding, motorcycles, music, the future, game development
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
 
-\section{education}
+% Makes resume-specific commands available.
+\usepackage{resume}
 
-\begin{entrylist}
-	\entry
-    		{thru 2012}
-    		{Completionist {\normalfont many online courses}}
-    		{Coursera}
-    		{%
-    			{\emph{Introduction to Mathematical Thinking}} \\
-    			{\emph{Machine Learning}} \\
-    			{\emph{Algorithms, Part I}} \\
-    			{\emph{Cryptography I}} \\
-    			{\emph{Introduction to Astronomy}} \\
-    			{\emph{Calculus: Single Variable}}%
-    		}
-  	\entry
-  		{2010-2011}
-  		{AAS {\normalfont Avionics Systems Technology}}
-  		{Community College of the Air Force}
-  		{\emph{Avionics Systems Theory and Maintenance}}
-\end{entrylist}
 
-\section{experience}
 
-\begin{entrylist}
-    \entry
-         {current}
-         {Software Engineer}
-         {The Nerdery}
-         {Lead developer for Purina and PurinaONE brand sites. Constructed a small mapping application using ArcGIS. Built a number of open source libraries for the Elixir community, including contributions to the language itself. Focused on growing my FP, crypto, and concurrent/distributed programming skills.}
-	\entry
-		{2012-2013}
-		{Senior Software Developer}
-		{Surge LLC.}
-		{Lead developer on three projects. Developed expertise with Adobe InDesign Server and %
-		 InDesign Markup Language.}
-	\entry
-		{2010-2012}
-		{Software Developer}
-		{ProtoLabs Inc.}
-		{Primary developer of numerous projects. Most developers at ProtoLabs fit in to one of two teams, %
-		 web or backend - I was the exception, primarily devoted to R\&D applications with focus towards %
-		 internal process improvement and reporting/data mining capability.}
-	\entry
-		{since 2010}
-		{Avionics Systems Journeyman}
-		{United States Air Force}
-		{My second job is with the Air National Guard/USAF out of Madison, WI - where I work as a flightline %
-		 avionics technician on Lockheed Martin F-16C/D fighter jets. I'm currently a Senior Airman, working %
-		 towards my Staff Sergeant stripes.}
-	\entry
-		{2008-2010}
-		{Software Developer}
-		{Business Card Services Inc.}
-		{The entirety of my time at BCSI was spent as the primary developer behind a project to port a %
-		 legacy manufacturing process written and maintained since the late 80's to a modern, C\# and ASP.NET %
-		 driven system, while expanding it's capabilities, and providing some new reporting and data mining %
-		 features that the old system could not provide. After the first release of the new software, I left %
-		 for training with the United States Air Force.}
-	\entry
-		{2006-2008}
-		{Software Developer}
-		{Warner Connect Inc.}
-		{Responsible for a wide variety of websites and business applications. Developed expertise with Microsoft CRM during this time.}
-\end{entrylist}
 
-\section{developed skills}
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
 
-\begin{tikzpicture}
-	\path[mindmap,concept color=lightgray!50!white,text=black]
-		node[concept] {Software \\ Development}
-		[clockwise from=0]
-    		child[concept color=lightgray!30!white] {
-      		node[concept] {engineering}
-      		[clockwise from=90]
-      		child[concept color=lightgray!15!white] { node[concept] {algorithms} }
-      		child[concept color=lightgray!15!white] { node[concept] {data structures} }
-      		child[concept color=lightgray!15!white] { node[concept] {architecture} }
-      		child[concept color=lightgray!15!white] { node[concept] {design patterns} }
-    		}  
-    		child[concept color=lightgray!30!white] {
-      		node[concept] {soft skills}
-      		[clockwise from=-30]
-      		child[concept color=lightgray!15!white] { node[concept] {customer relations} }
-      		child[concept color=lightgray!15!white] { node[concept] {time \\ management} }
-      		child[concept color=lightgray!15!white] { node[concept] {team \\ management} }
-    		}
-    		child[concept color=lightgray!30!white] { 
-    			node[concept] {practical}
-    			[clockwise from=-70]
-    			child[concept color=lightgray!15!white] { node[concept] {languages} }
-    			child[concept color=lightgray!15!white] { node[concept] {databases} }
-    			child[concept color=lightgray!15!white] { node[concept] {web servers} }
-    			child[concept color=lightgray!15!white] { node[concept] {source control} }
-    		};
-\end{tikzpicture}
 
-\section{proficiencies}
+% title on top of the document
+\maintitle{Paul Schoenfelder}{April 12, 1987}{Last update on \today}
 
-\begin{entrylist}
-	\entry
-		{Languages}
-		{I can always learn one more!}
-		{}
-		{%
-			\hilite{C\#, Elixir,} Scala, Erlang, Ruby, F#, Clojure,
-			\hilite{JavaScript, CoffeeScript,} Bash,
-			Powershell, C/C++, \hilite{HTML, CSS, SASS}
-		}
-	\entry
-		{Tools}
-		{What is a craftsman without his tools...}
-		{}
-		{%
-			\hilite{Visual Studio, XCode,} Sublime Text, \hilite{Git}, Mercurial,
-			Subversion, \hilite{NUnit}, Puppet, Vagrant, Jenkins/Wercker, GitHub,
-		}
-	\entry
-		{Platforms}
-		{A strong foundation to build upon...}
-		{}
-		{%
-			\hilite{ASP.NET MVC, Erlang/OTP, Node.js,} WPF, Rails, OpenGL, Play
-		}
-\end{entrylist}
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
-       
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:paulschoenfelder@gmail.com}{paulschoenfelder\mbox{}@\mbox{}gmail.com}\sbull
+952-905-4095\sbull
+\href{http://bitwalker.org}{bitwalker.org}
+\\
+8950 Goodrich Rd\sbull
+Apt \#305\sbull
+Bloomington\sbull
+Minnesota\sbull
+55437
+
+\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Summary}  % a root section title
+
+\vspace{-1.3em}  % some vertical spacing
+\begin{multicols}{2}  % open a multicolumn environment
+\noindent \emph{I'm a nerd with a love for open source, embedded and distributed computing, and a passion for developing high-quality software.}
+\\
+\\
+I started out in IT as a network engineer, working with Cisco equipment, but it wasn't long before I had delved in to writing scripts for automation. Once I had a taste for code, I knew it was where I belonged, and I was relentless in purusing an open developer position at the same company. I was given the opportunity, and I've been a software engineer ever since.
+
+I was thrown in to the world of software engineering, and had to learn fast. I soaked up books, blogs, talks, whatever I could. The tools I was given were C\#, HTML/CSS, Javascript, as well as Bash and Powershell. I picked up Ruby and a bit of Python for scripting not long after, and my curiousity was piqued. Slowly I've added Clojure, Scala, F\#, Erlang and Elixir to the list.
+
+I'm active in open source. I love embedded dev, and have a Pi and Arduino. I'm a strong believer in concurrency, distribution, and functional programming. But most of all, I love building software.
+\end{multicols}
+
+
+\spacedhrule{0em}{-0.4em}
+
+\roottitle{Experience}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.nerdery.com}{The Nerdery}}
+  {\textsc{Bloomington, Minnesota}} {%
+  \headedsubsection
+    {Software Engineer}
+    {Mar \apo13 -- present}
+    {\bodytext{Lead developer for Purina and PurinaONE brand sites, consisting of a team of 8 devs. Architected and built a mapping application using the ArcGIS platform. Built a number of open source libraries for the Elixir community, including contributions to the language itself. Focused on growing my FP, crypto, and concurrent/distributed programming skills.}}
+}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\href{http://www.surgeforward.com}{Surge}}
+  {\textsc{Saint Paul, Minnesota}} {%
+  \headedsubsection
+    {Senior Software Engineer}
+    {May \apo12 -- Mar \apo13}
+    {\bodytext{Lead developer on three projects, leading teams of 1-4 devs. Developed in-depth expertise with Adobe InDesign Server and InDesign Markup Language. Worked remotely the entirety of my time with Surge as a contractor.}}
+}
+
+\headedsection
+  {\href{http://www.protolabs.com}{ProtoLabs Inc.}}
+  {\textsc{Maple Plain, Minnesota}} {%
+  \headedsubsection
+    {Software Engineer}
+    {Oct \apo10 -- May \apo12}
+    {\bodytext{Primary developer of numerous projects. Most developers at ProtoLabs fit in to one of two teams, web or backend - I was the exception, primarily devoted to R&D applications with focus towards internal process improvement and reporting/data mining capability.}}
+}
+
+\headedsection
+  {United States Air Force}
+  {\textsc{Madison, Wisconsin}} {%
+  \headedsubsection
+    {Avionic Systems Journeyman}
+    {Apr \apo09 -- present}
+    {\bodytext{My second job is with the Air National Guard/USAF out of Madison, WI - where I work as a flightline avionics technician on Lockheed Martin F-16C/D fighter jets. I’m currently a Senior Airman, working towards my Staff Sergeant stripes.}}
+}
+
+\headedsection
+  {Business Card Services, Inc.}
+  {\textsc{Burnsville, Minnesota}} {%
+  \headedsubsection
+    {Software Developer}
+    {Oct \apo08 -- Dec \apo09}
+    {\bodytext{The entirety of my time at BCSI was spent as the primary developer behind a project to port a legacy manufacturing process written and maintained since the late 80’s to a modern, C# and ASP.NET driven system, while expanding it’s capabilities, and providing some new reporting and data mining features that the old system could not provide. After the first release of the new software, I left for training with the United States Air Force.}}
+}
+
+
+\vspace{-0.2em}
+\begin{center}
+  \emph{\small Please refer to my \href{http://www.linkedin.com/in/gotbones}{Linked-in profile} for more a more complete list of my work experiences along with recommendations.}
+\end{center}
+
+
+\spacedhrule{-0.2em}{-0.4em}
+
+\roottitle{Skills}
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Technical expertise:}
+  {Software design and implementation. Testing, continuous deployment, and automation. Enjoys writing Elixir/\nsp Erlang/\nsp C\#/\nsp Clojure, and Ruby, with interest in many more. Thorough knowledge of web technologies:\ \acr{HTML+CSS}, JavaScript, \acr{XML}, \acr{REST}, and \acr{SOAP}. System administration skills:\ Bash, nginx, Postgres\acr{SQL}, MSSQL, Vagrant, Puppet, and \acr{VM}ware. Strong base in computer science fundamentals like data structures and algorithms.}
+
+\roottitle{Interests}
+
+\inlineheadsection
+  {Non-exhaustive and in no particular order:}
+  {cryptography, artificial intelligence, game development, music, snowboarding, homebrewing, motorcycles, the outdoors, and more!}
+
+
 \end{document}
+
+＀
