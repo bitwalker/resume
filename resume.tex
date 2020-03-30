@@ -40,14 +40,13 @@
 % \sbull is a spaced bullet
 % \href well..
 % \\ breaks the line into a new paragraph
-\noindent\href{mailto:paulschoenfelder@gmail.com}{paulschoenfelder\mbox{}@\mbox{}gmail.com}\sbull
+\noindent\href{mailto:paulschoenfelder@fastmail.com.com}{paulschoenfelder\mbox{}@\mbox{}fastmail.com}\sbull
 952-905-4095\sbull
 \href{http://bitwalker.org}{bitwalker.org}
 \\
-11600 Timberline Road\sbull
-Minnetonka\sbull
-Minnesota\sbull
-55305
+Saratoga Springs\sbull
+New York\sbull
+12866
 
 \spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
 
@@ -71,11 +70,38 @@ I'm active in open source. I experiment with embedded development. I love functi
 \roottitle{Professional Experience}
 
 \headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.ockam.io}{Ockam}}
+  {\textsc{Remote}} {%
+  \headedsubsection
+    {Architectural Engineer}
+    {Jan \apo20 -- present}
+    {\bodytext{My role at Ockam is to build out the cloud services platform, in particular, the messaging and routing layer.}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.dockyard.com}{DockYard}}
+  {\textsc{Remote}} {%
+  \headedsubsection
+    {Architectural Engineer}
+    {Oct \apo17 -- Jan \apo20}
+    {\bodytext{My role at DockYard took two shapes: first as software architect on client projects, primarily focused on deployment and infrastructure; second as technical lead on various R\&D projects. I was originally hired to work on my open source projects, namely Distillery, and get releases integrated into Elixir Core, which happened in Elixir 1.9. The last year of my time at DockYard was spent working on Lumen, an ahead-of-time compiler for Erlang and Elixir that targets WebAssembly.}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.fireeye.com}{FireEye}}
+  {\textsc{Remote}} {%
+  \headedsubsection
+    {Senior Staff Software Engineer}
+    {Jan \apo17 -- Oct \apo17}
+    {\bodytext{My role at FireEye was focused on the implementation of a concurrent, distributed, throughput-heavy workflow and data processing engine for security orchestration, built in Elixir.}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
   {\href{http://www.exosite.com}{Exosite}}
   {\textsc{Minneapolis, Minnesota}} {%
   \headedsubsection
     {Senior Web and Infrastructure Engineer}
-    {Oct \apo15 -- present}
+    {Oct \apo15 -- Jan \apo17}
     {\bodytext{Lead developer on some of Exosite's most critical core services, built on Erlang and Elixir, with a few in Go (with parts written in C). Became very proficient with an array of AWS services, as well as  Kubernetes in order to implement an OpenShift-based hosting platform for customer and internal applications. The applications I built were distributed, highly concurrent infrastructure services, with all the resultant challenges. I am heavily involved in the Erlang/Elixir community, and gave two talks, one at ElixirConf 2015, and one at ElixirConf 2016.}}
 }
 
@@ -86,24 +112,6 @@ I'm active in open source. I experiment with embedded development. I love functi
     {Senior Software Engineer}
     {Mar \apo13 -- Oct 15}
     {\bodytext{Lead developer for a number of projects both large and small, managing teams of 2 to 10 devs. C\# and Scala work primarily, but some F\# as well. Built a number of open source libraries for the Elixir community, including contributions to the language itself. Focused on growing my functional programming, cryptography, and concurrent/distributed systems skills in my spare time.}}
-}
-
-\headedsection  % sets the header for a subsection and contains usually body text
-  {\href{http://www.surgeforward.com}{Surge}}
-  {\textsc{Saint Paul, Minnesota}} {%
-  \headedsubsection
-    {Senior Software Engineer}
-    {May \apo12 -- Mar \apo13}
-    {\bodytext{Lead developer on three projects, leading teams of 2-4 devs, each involving complex web-based applications for large enterprise customers. Developed in-depth expertise with Adobe InDesign Server and InDesign Markup Language. I was a contractor for this period, working 100\% remotely.}}
-}
-
-\headedsection
-  {\href{http://www.protolabs.com}{ProtoLabs Inc.}}
-  {\textsc{Maple Plain, Minnesota}} {%
-  \headedsubsection
-    {Software Engineer}
-    {Oct \apo10 -- May \apo12}
-    {\bodytext{Primary developer on numerous R&D projects. Most developers at ProtoLabs were assigned to one of two teams, web or business apps - I was a bit of an exception, assigned to the business team, but primarily dedicated to research projects which focused on automation, process improvement, and data mining/predictive analytics.}}
 }
 
 \headedsection
@@ -123,14 +131,14 @@ I'm active in open source. I experiment with embedded development. I love functi
 
 \spacedhrule{-0.2em}{-0.4em}
 
-\roottitle{Open Source}
+\roottitle{Notable Open Source Projects}
 
 \headedsection
-  {\href{https://github.com/bitwalker/aria}{Aria}}{%
+  {\href{https://github.com/lumen/lumen}{Lumen}}{%
   \headedsubsection
-    {Author/Maintainer}
-    {Nov \apo16 -- present}
-    {\bodytext{Aria is a programming language I'm designing/building. It is a strong, statically typed functional language, modeled after languages in the ML family, but with a focus on ease-of-use, maintainability, and the introduction of modern features that other languages in that family do not have - namely actor-based concurrency, real-time garbage collection, and run-time debugging/tracing tools. It is written in OCaml and C}}}
+    {Technical Lead/Maintainer}
+    {Jan \apo19 -- present}
+    {\bodytext{Lumen is an ahead-of-time compiler for Erlang and Elixir that can target a variety of architectures, of which WebAssembly is of primary interest. It can be thought of as an alternative to the BEAM virtual machine, except rather than a virtual machine, Lumen compiles to native code. In addition to the compiler, Lumen also includes a runtime that allows it to integrate with browser APIs when targeting WebAssembly. It is built in Rust and C++, and builds on top of LLVM.}}}
 
 \headedsection
   {\href{https://github.com/bitwalker/distillery}{Distillery}}{%
@@ -153,6 +161,34 @@ I'm active in open source. I experiment with embedded development. I love functi
 
 \spacedhrule{-0.2em}{-0.4em}
 
+\roottitle{Conference Talks}
+
+\inlineheadsection
+  {2019:}
+  {CodeMesh LDN, ElixirConf, LoneStar Elixir}
+  
+\inlineheadsection
+  {2018:}
+  {The Big Elixir, LoneStar Elixir, CodeBEAM SF}
+  
+\inlineheadsection
+  {Older:}
+  {ElixirConf x2, LoneStar Elixir}
+  
+  
+\roottitle{Podcasts}
+
+\inlineheadsection
+  {2020:}
+  {Elixir Wizards}
+  
+  
+\inlineheadsection
+  {2019:}
+  {Smart Software with SmartLogic, Elixir Talk, ElixirMix}
+
+
+
 \roottitle{Skills}
 
 \inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
@@ -160,7 +196,7 @@ I'm active in open source. I experiment with embedded development. I love functi
   {C, C\#, Clojure, Elixir, Erlang, F\#, Go, Javascript, Lua, OCaml, Python, Ruby, Rust, Scala, Shell}
 \inlineheadsection
   {Theory:}
-  {Type theory, compilers, interpreters, data structures and algorithms, distributed consensus}
+  {Type theory, compilers, interpreters, data structures and algorithms, distributed consensus, messaging and protocol design}
 \inlineheadsection
   {Dev/Ops:}
   {Networking, administration of Linux and Windows systems, deployment automation, deployment orchestration, continuous integration with internal and external build systems, AWS services, Azure services, Kubernetes, OpenShift}
@@ -169,7 +205,7 @@ I'm active in open source. I experiment with embedded development. I love functi
   {I've built applications ranging from simple scripts to desktop applications with graphical interfaces. Single-threaded console utilities, to distributed, heavily-concurrent backend services where performance is critical. I've worked on scripting systems, web applications, some embedded software, and designed and developed remotely upgradeable, hot-pluggable services for gateway devices. If it's something new, I make a point to learn everything I can about the domain, and then dive in.}
 \inlineheadsection
   {Non-technical skills:}
-  {Can speak beginner-level Russian, and improving every day}
+  {Can speak beginner-level Russian, and trying to improve every day}
 
 \roottitle{Interests}
 
